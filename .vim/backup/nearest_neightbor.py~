@@ -1,0 +1,54 @@
+from scipy.spatial import distance
+
+
+order = []
+
+class Points:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+def getNearestNeighbor(currPoint, visited, tourDist):
+    if len(points) == 1:
+        return tourDist
+    visited.append(currPoint)
+    points.remove(currPoint)
+    euc_dist = 1000
+    nextPoint = currPoint 
+    for p in points:
+        a = (int(currPoint.x), int(currPoint.y))
+        b = (int(p.x), int(p.y))
+        if euc_dist > distance.euclidean(a, b):
+            euc_dist = distance.euclidean(a,b)
+            nextPoint = p 
+    
+    order.append(nextPoint)
+    return getNearestNeighbor(nextPoint, visited, tourDist + euc_dist)
+
+
+with open("points.txt") as f:
+    content = f.readlines()
+
+content = [x.strip() for x in content]
+numPoints = content.pop(0)
+points = []
+for s in content:
+    x, y = s.split()
+    points.append(Points(x, y))
+
+
+point = points[0] #p = p0
+visited = []
+order.append(point)
+
+tourDist = getNearestNeighbor(point, visited, 0)
+
+
+
+#print order to travel in 
+for temp in order:
+    print(temp.x, temp.y)
+
+print("Tour dist ", tourDist)
+
+
