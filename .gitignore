@@ -1,0 +1,14 @@
+/*/
+Release.key
+examples.desktop
+.xsession-errors.old
+.xsession-errors
+.viminfo
+.sudo_as_admin_successful
+.profile
+.dmrc
+.bashrc
+.bash_logout
+.bash_history
+.ICEauthority
+
