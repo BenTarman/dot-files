@@ -1,17 +1,11 @@
 from scipy.spatial import distance
+import tspinput
+import sys
+import time
 
-
-order = []
-
-class Points:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-
-def getNearestNeighbor(currPoint, visited, tourDist):
+def getNearestNeighbor(currPoint, tourDist):
     if len(points) == 1:
         return tourDist
-    visited.append(currPoint)
     points.remove(currPoint)
     euc_dist = 1000
     nextPoint = currPoint 
@@ -23,27 +17,24 @@ def getNearestNeighbor(currPoint, visited, tourDist):
             nextPoint = p 
     
     order.append(nextPoint)
-    return getNearestNeighbor(nextPoint, visited, tourDist + euc_dist)
+    return getNearestNeighbor(nextPoint, tourDist + euc_dist)
+
+start_time = time.time()
+
+order = []
+points = tspinput.getFile(sys.argv[1])
+
+initialPoint = points[0] #p = p0
+order.append(initialPoint)
+
+tourDist = getNearestNeighbor(initialPoint, 0)
+lastPoint = order[len(order) - 1]
 
 
-with open("points.txt") as f:
-    content = f.readlines()
+a = (int(initialPoint.x), int(initialPoint.y))
+b = (int(lastPoint.x), int(lastPoint.y))
 
-content = [x.strip() for x in content]
-numPoints = content.pop(0)
-points = []
-for s in content:
-    x, y = s.split()
-    points.append(Points(x, y))
-
-
-point = points[0] #p = p0
-visited = []
-order.append(point)
-
-tourDist = getNearestNeighbor(point, visited, 0)
-
-
+tourDist += distance.euclidean(a,b)
 
 #print order to travel in 
 for temp in order:
@@ -51,4 +42,4 @@ for temp in order:
 
 print("Tour dist ", tourDist)
 
-
+print("--- %s seconds ---" % (time.time() - start_time))

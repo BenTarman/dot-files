@@ -69,7 +69,7 @@ nmap <Leader><CR> :nohlsearch<cr>
 
 set background=dark
 "add color scheme
-colorscheme gruvbox
+"colorscheme gruvbox
 
 set splitbelow
 set splitright

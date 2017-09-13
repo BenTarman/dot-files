@@ -7,15 +7,25 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Search Pattern:
+~MSle0~/mod+Shift+j
+
 # Command Line History (newest to oldest):
 :wq
 :w
-:W
+:ew
 :q
 :q!
+:W
 :PluginInstall
 
 # Search String History (newest to oldest):
+?/mod+Shift+j
+?/bindsym
+?/i3
+?/work
+?/module/i3
+?/bot
 
 # Expression History (newest to oldest):
 
@@ -24,310 +34,762 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-""1	LINE	0
-	Documents
+"0	CHAR	0
+	; exec i3-msg [id="$(cat.stickidtmp)"] move workspace current
+"1	LINE	0
+	
+	
 "2	LINE	0
-	    global tourDist
+	urxvt*shading: 30
 "3	LINE	0
-	    tourDist += euc_dist
+	urxvt*transparent: true
 "4	LINE	0
-	tourDist = 0
+	!make Transparent
 "5	LINE	0
-	    global order 
+	urxvt*background: rgba:0000/0000/0200/c800
 "6	LINE	0
-	print(order.x, order.y)
+	urxvt*depth: 32
 "7	LINE	0
-	order = []
+	urxvt*background: rgba:0000/0000/0200/c800
 "8	LINE	0
-	    print(nextPoint.x, nextPoint.y)
+	urxvt*depth: 32
 "9	LINE	0
-	while len(points) > 1:
-"-	CHAR	0
+	URxvt.font: xft:monaco:size=14
+""-	CHAR	0
 	 
 
 # File marks:
-'0  1  8  ~/.gitignore
-'1  54  0  ~/pythonCodes/TSP/nearest_neightbor.py
-'2  1  11  ~/pythonCodes/TSP/nearest_neightbor.py
-'3  5  0  ~/pythonCodes/TSP/points.txt
-'4  55  12  ~/pythonCodes/TSP/nearest_neightbor.py
-'5  6  0  ~/pythonCodes/TSP/points.txt
-'6  1  0  ~/.Xresources
-'7  3  0  ~/.Xresources
-'8  42  0  ~/.Xresources
-'9  87  21  ~/.Xresources
+'0  1  0  ~/pythonCodes/TSP/optimal.py
+'1  58  0  ~/.Xresources
+'2  4  0  ~/.Xresources
+'3  2  16  ~/.Xdefaults
+'4  1  0  ~/.Xdefaults
+'5  4  41  ~/.Xresources
+'6  3  56  ~/.Xresources
+'7  2  51  ~/.Xresources
+'8  18  0  ~/.Xresources
+'9  14  13  ~/.Xresources
 
 # Jumplist (newest first):
--'  1  8  ~/.gitignore
--'  54  0  ~/pythonCodes/TSP/nearest_neightbor.py
--'  44  10  ~/pythonCodes/TSP/nearest_neightbor.py
--'  26  0  ~/pythonCodes/TSP/nearest_neightbor.py
--'  41  11  ~/pythonCodes/TSP/nearest_neightbor.py
--'  49  10  ~/pythonCodes/TSP/nearest_neightbor.py
--'  1  0  ~/pythonCodes/TSP/nearest_neightbor.py
--'  21  19  ~/pythonCodes/TSP/nearest_neightbor.py
--'  38  0  ~/pythonCodes/TSP/nearest_neightbor.py
--'  33  0  ~/pythonCodes/TSP/nearest_neightbor.py
--'  39  22  ~/pythonCodes/TSP/nearest_neightbor.py
--'  10  0  ~/pythonCodes/TSP/nearest_neightbor.py
--'  40  14  ~/pythonCodes/TSP/nearest_neightbor.py
--'  5  0  ~/pythonCodes/TSP/points.txt
+-'  1  0  ~/pythonCodes/TSP/optimal.py
+-'  58  0  ~/.Xresources
+-'  1  0  ~/.Xresources
+-'  4  0  ~/.Xresources
+-'  2  16  ~/.Xdefaults
+-'  1  0  ~/.Xdefaults
+-'  3  56  ~/.Xresources
+-'  2  51  ~/.Xresources
+-'  18  0  ~/.Xresources
+-'  14  13  ~/.Xresources
+-'  16  46  ~/.Xresources
+-'  11  99  ~/.Xresources
+-'  101  35  ~/.config/i3/config
+-'  95  17  ~/.config/i3/config
+-'  102  35  ~/.config/i3/config
+-'  103  35  ~/.config/i3/config
+-'  104  35  ~/.config/i3/config
+-'  99  0  ~/.config/i3/config
+-'  58  0  ~/.config/i3/config
+-'  59  0  ~/.config/i3/config
+-'  93  1  ~/.config/i3/config
+-'  90  0  ~/.config/i3/config
+-'  87  0  ~/.config/i3/config
+-'  84  0  ~/.config/i3/config
+-'  81  0  ~/.config/i3/config
+-'  80  0  ~/.config/i3/config
+-'  79  0  ~/.config/i3/config
+-'  76  0  ~/.config/i3/config
+-'  73  0  ~/.config/i3/config
+-'  70  0  ~/.config/i3/config
+-'  67  0  ~/.config/i3/config
+-'  66  0  ~/.config/i3/config
+-'  65  0  ~/.config/i3/config
+-'  64  0  ~/.config/i3/config
+-'  61  0  ~/.config/i3/config
+-'  60  0  ~/.config/i3/config
+-'  55  0  ~/.config/i3/config
+-'  54  0  ~/.config/i3/config
+-'  53  0  ~/.config/i3/config
+-'  52  0  ~/.config/i3/config
+-'  49  0  ~/.config/i3/config
+-'  48  0  ~/.config/i3/config
+-'  47  0  ~/.config/i3/config
+-'  46  0  ~/.config/i3/config
+-'  43  2  ~/.config/i3/config
+-'  39  0  ~/.config/i3/config
+-'  36  0  ~/.config/i3/config
+-'  33  0  ~/.config/i3/config
+-'  11  0  ~/.config/i3/config
+-'  1  0  ~/.config/i3/config
+-'  1  0  ~/pythonCodes/TSP/timings.txt
+-'  3  25  ~/pythonCodes/TSP/timings.txt
+-'  2  0  ~/pythonCodes/TSP/timings.txt
+-'  6  27  ~/rubyCodes/scramble/scramble.rb
+-'  1  0  ~/rubyCodes/scramble/scramble.rb
+-'  6  9  ~/rubyCodes/scramble/words.txt
+-'  1  0  ~/rubyCodes/scramble/words.txt
+-'  3  56  ~/rubyCodes/scramble/scramble.rb
+-'  7  0  ~/rubyCodes/scramble/words.rb
+-'  1  0  ~/rubyCodes/scramble/words.rb
+-'  22  15  ~/rubyCodes/scramble/scramble.rb
+-'  4  36  ~/rubyCodes/scramble/words.rb
+-'  3  33  ~/rubyCodes/scramble/words.rb
+-'  1  0  ~/rubyCodes/scramble/words.
+-'  12  0  ~/rubyCodes/scramble/NERD_tree_1
+-'  13  2  ~/rubyCodes/scramble/NERD_tree_1
+-'  1  0  ~/rubyCodes/scramble/NERD_tree_1
+-'  7  0  ~/rubyCodes/hangman/NERD_tree_1
+-'  1  0  ~/rubyCodes/hangman/NERD_tree_1
+-'  7  0  ~/rubyCodes/hangman/words.rb
+-'  1  0  ~/rubyCodes/hangman/words.rb
+-'  1  0  ~/rubyCodes/hangman/words
+-'  9  3  ~/rubyCodes/scramble/words.txt
+-'  10  0  ~/pythonCodes/TSP/10points.txt
+-'  1  0  ~/pythonCodes/TSP/10points.txt
+-'  23  15  ~/pythonCodes/TSP/makeInputFiles.py
+-'  1  0  ~/pythonCodes/TSP/makeInputFiles.py
+-'  9  4  ~/pythonCodes/TSP/10points.txt
+-'  8  5  ~/pythonCodes/TSP/10points.txt
+-'  7  6  ~/pythonCodes/TSP/10points.txt
+-'  5  0  ~/pythonCodes/TSP/10points.txt
+-'  5  3  ~/pythonCodes/TSP/points.txt
 -'  1  0  ~/pythonCodes/TSP/points.txt
--'  55  12  ~/pythonCodes/TSP/nearest_neightbor.py
--'  6  0  ~/pythonCodes/TSP/points.txt
--'  1  0  ~/.Xresources
--'  3  0  ~/.Xresources
--'  42  0  ~/.Xresources
--'  22  0  ~/.Xresources
--'  87  21  ~/.Xresources
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  48  21  ~/.Xresources
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  44  0  ~/.Xresources
--'  24  0  ~/.Xresources
--'  89  21  ~/.Xresources
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  50  21  ~/.Xresources
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.Xresources
--'  3  0  ~/.Xresources
--'  42  0  ~/.Xresources
--'  22  0  ~/.Xresources
--'  87  21  ~/.Xresources
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  48  21  ~/.Xresources
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  44  0  ~/.Xresources
--'  24  0  ~/.Xresources
--'  89  21  ~/.Xresources
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  50  21  ~/.Xresources
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  1  0  ~/.Xresources
--'  3  0  ~/.Xresources
--'  42  0  ~/.Xresources
--'  22  0  ~/.Xresources
--'  87  21  ~/.Xresources
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  48  21  ~/.Xresources
--'  1  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  44  0  ~/.Xresources
--'  54  0  ~/pythonCodes/TSP/nearest_neightbor.py
--'  44  10  ~/pythonCodes/TSP/nearest_neightbor.py
--'  26  0  ~/pythonCodes/TSP/nearest_neightbor.py
--'  41  11  ~/pythonCodes/TSP/nearest_neightbor.py
--'  49  10  ~/pythonCodes/TSP/nearest_neightbor.py
--'  1  0  ~/pythonCodes/TSP/nearest_neightbor.py
--'  21  19  ~/pythonCodes/TSP/nearest_neightbor.py
--'  38  0  ~/pythonCodes/TSP/nearest_neightbor.py
--'  33  0  ~/pythonCodes/TSP/nearest_neightbor.py
--'  39  22  ~/pythonCodes/TSP/nearest_neightbor.py
--'  10  0  ~/pythonCodes/TSP/nearest_neightbor.py
--'  40  14  ~/pythonCodes/TSP/nearest_neightbor.py
--'  5  0  ~/pythonCodes/TSP/points.txt
--'  1  0  ~/pythonCodes/TSP/points.txt
--'  55  12  ~/pythonCodes/TSP/nearest_neightbor.py
--'  6  0  ~/pythonCodes/TSP/points.txt
--'  1  0  ~/.Xresources
--'  3  0  ~/.Xresources
+-'  6  3  ~/pythonCodes/TSP/points.txt
+-'  66  16  ~/.Xresources
+-'  101  35  ~/.config/i3/config
+-'  95  17  ~/.config/i3/config
+-'  102  35  ~/.config/i3/config
+-'  103  35  ~/.config/i3/config
+-'  104  35  ~/.config/i3/config
+-'  99  0  ~/.config/i3/config
+-'  58  0  ~/.config/i3/config
+-'  59  0  ~/.config/i3/config
+-'  93  1  ~/.config/i3/config
+-'  90  0  ~/.config/i3/config
+-'  87  0  ~/.config/i3/config
+-'  10  13  ~/.Xresources
+-'  12  46  ~/.Xresources
+-'  7  99  ~/.Xresources
 
 # History of marks within files (newest to oldest):
 
-> ~/.gitignore
-	"	1	8
-	^	1	9
-	.	1	8
-	+	1	8
-
-> ~/pythonCodes/TSP/nearest_neightbor.py
-	"	54	0
-	^	44	11
-	.	44	10
-	+	44	0
-	+	18	3
-	+	14	3
-	+	21	16
-	+	39	0
-	+	38	0
-	+	34	25
-	+	36	19
-	+	34	10
-	+	37	30
-	+	21	18
-	+	1	0
-	+	1	11
-	+	21	37
-	+	19	33
-	+	20	25
-	+	11	31
-	+	19	50
-	+	20	32
-	+	21	39
-	+	1	34
-	+	20	21
-	+	19	37
-	+	21	41
-	+	44	16
-	+	44	0
-	+	21	0
-	+	20	26
-	+	19	28
-	+	20	20
-	+	29	0
-	+	27	8
-	+	21	56
-	+	16	23
-	+	27	34
-	+	24	0
-	+	44	13
-	+	44	16
-	+	44	27
-	+	44	0
-	+	27	30
-	+	28	0
-	+	44	0
-	+	27	35
-	+	27	0
-	+	16	15
-	+	27	0
-	+	21	46
-	+	22	44
-	+	16	18
-	+	23	25
-	+	24	30
-	+	44	56
-	+	55	26
-	+	23	24
-	+	55	0
-	+	14	29
-	+	15	26
-	+	55	0
-	+	44	21
-	+	44	60
-	+	54	0
-	+	44	20
-	+	45	0
-	+	24	47
-	+	44	3
-	+	24	4
-	+	17	19
-	+	44	0
-	+	12	24
-	+	13	13
-	+	24	33
-	+	17	24
-	+	12	22
-	+	24	3
-	+	5	10
-	+	24	27
-	+	26	0
-	+	42	19
-	+	49	22
-	+	5	0
-	+	41	10
-	+	49	0
+> ~/pythonCodes/TSP/optimal.py
+	"	1	0
+	.	22	0
+	+	3	15
+	+	8	39
+	+	41	0
+	+	10	16
+	+	12	0
+	+	23	40
+	+	25	44
+	+	26	25
+	+	30	47
+	+	30	22
+	+	30	0
+	+	30	0
+	+	10	7
+	+	30	36
+	+	12	11
+	+	30	0
+	+	30	46
+	+	12	26
+	+	19	0
+	+	12	11
+	+	12	3
+	+	26	37
+	+	12	23
+	+	26	29
+	+	13	25
+	+	17	18
+	+	14	0
+	+	17	7
 	+	4	0
-	+	49	18
-	+	49	18
-	+	50	25
-	+	53	0
-	+	48	25
-	+	5	11
-	+	26	23
-	+	52	27
-	+	26	18
-	+	24	4
 	+	5	0
-	+	11	50
-	+	26	0
-	+	44	35
-	+	13	22
-	+	44	10
-
-> ~/pythonCodes/TSP/points.txt
-	"	5	0
-	.	6	0
-	+	5	4
+	+	17	39
+	+	14	26
+	+	15	24
+	+	16	45
+	+	15	33
+	+	18	14
+	+	30	0
+	+	32	19
+	+	33	27
+	+	31	19
+	+	40	63
+	+	41	113
+	+	40	0
+	+	41	58
+	+	6	7
+	+	41	6
+	+	7	54
+	+	7	0
 	+	6	0
+	+	7	10
+	+	7	28
+	+	7	9
+	+	41	0
+	+	41	0
+	+	7	0
+	+	1	10
+	+	7	0
+	+	8	0
+	+	20	0
+	+	22	0
+	+	21	36
+	+	39	53
+	+	38	28
+	+	22	35
+	+	5	9
+	+	22	0
 
 > ~/.Xresources
-	"	1	0
-	^	42	34
-	.	3	0
+	"	58	0
+	^	59	27
+	.	59	0
 	+	1	0
 	+	1	0
 	+	1	0
-	+	88	0
-	+	3	22
-	+	3	0
-	+	87	21
-	+	42	33
-	+	4	0
-	+	5	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
 	+	6	0
 	+	7	0
 	+	8	0
-	+	9	0
-	+	10	0
 	+	11	0
-	+	12	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	1	0
+	+	11	0
+	+	11	0
+	+	11	35
+	+	11	68
+	+	11	35
+	+	1	21
+	+	10	0
+	+	10	0
+	+	11	100
+	+	11	35
+	+	18	0
+	+	16	46
+	+	14	15
 	+	13	0
 	+	14	0
-	+	15	0
-	+	16	0
-	+	17	0
-	+	18	0
-	+	19	0
-	+	20	0
-	+	21	0
-	+	22	0
-	+	23	0
-	+	24	0
-	+	25	0
-	+	26	0
-	+	27	0
-	+	28	0
-	+	29	0
-	+	30	0
-	+	31	0
-	+	32	0
-	+	33	0
-	+	34	0
-	+	35	0
-	+	36	0
-	+	37	0
-	+	38	0
-	+	39	0
-	+	40	0
-	+	41	0
+	+	11	0
+	+	18	16
+	+	18	9
+	+	54	0
+	+	53	0
+	+	52	0
+	+	51	0
+	+	50	0
+	+	49	0
+	+	48	0
+	+	47	0
+	+	46	0
+	+	45	0
+	+	44	0
+	+	43	0
 	+	42	0
+	+	41	0
+	+	40	0
+	+	39	0
+	+	38	0
+	+	37	0
+	+	36	0
+	+	35	0
+	+	34	0
+	+	33	0
+	+	32	0
+	+	31	0
+	+	30	0
+	+	29	0
+	+	28	0
+	+	27	0
+	+	26	0
+	+	25	0
+	+	24	0
+	+	23	0
+	+	22	0
+	+	21	0
+	+	20	0
+	+	19	0
+	+	18	0
+	+	1	0
+	+	4	0
+	+	1	5
+	+	2	1
+	+	4	0
+	+	2	67
+	+	3	56
+	+	2	51
+	+	3	56
+	+	4	15
+	+	4	23
+	+	4	0
+	+	4	0
+	+	59	0
+
+> ~/.Xdefaults
+	"	2	16
+	^	2	17
+	.	2	16
+	+	1	23
+	+	2	16
+
+> ~/.config/i3/config
+	"	101	35
+	^	59	1
+	.	101	0
+	+	95	17
+	+	101	96
+	+	103	0
+	+	102	36
+	+	103	36
+	+	104	36
+	+	99	96
+	+	99	40
+	+	99	81
+	+	58	0
+	+	101	0
+
+> ~/pythonCodes/TSP/timings.txt
+	"	1	0
+	^	3	26
+	.	3	25
+	+	2	26
+	+	3	25
+
+> ~/rubyCodes/scramble/scramble.rb
+	"	6	27
+	^	6	28
+	.	6	27
+	+	1	15
+	+	6	16
+	+	1	15
+	+	6	30
+	+	20	3
+	+	22	15
+	+	9	19
+	+	10	0
+	+	20	0
+	+	9	18
+	+	6	17
+	+	22	0
+	+	22	0
+	+	52	0
+	+	8	40
+	+	22	0
+	+	22	11
+	+	23	30
+	+	43	2
+	+	23	49
+	+	23	17
+	+	19	0
+	+	17	19
+	+	23	28
+	+	16	11
+	+	23	43
+	+	15	22
+	+	10	41
+	+	23	32
+	+	37	11
+	+	37	1
+	+	26	25
+	+	37	0
+	+	26	26
+	+	37	0
+	+	25	48
+	+	24	54
+	+	25	10
+	+	26	41
+	+	25	22
+	+	26	41
+	+	27	13
+	+	28	25
+	+	29	24
+	+	30	16
+	+	31	80
+	+	32	13
+	+	34	13
+	+	35	24
+	+	36	24
+	+	37	0
+	+	39	19
+	+	36	32
+	+	39	21
+	+	41	4
+	+	46	62
+	+	50	0
+	+	45	25
+	+	46	64
+	+	48	35
+	+	49	0
+	+	49	2
+	+	30	0
+	+	37	13
+	+	38	0
+	+	27	8
+	+	34	8
+	+	37	8
+	+	31	94
+	+	1	77
+	+	3	56
+	+	6	27
+
+> ~/rubyCodes/scramble/words.txt
+	"	6	9
+	^	6	10
+	.	6	9
+	+	9	4
+	+	10	0
+	+	6	9
+
+> ~/rubyCodes/scramble/words.rb
+	"	10	0
+	^	7	0
+	.	7	0
 	+	3	0
+	+	4	36
+	+	3	22
+	+	4	35
+	+	2	24
+	+	10	2
+	+	1	10
+	+	4	35
+	+	7	2
+	+	9	0
+	+	7	12
+	+	8	16
+	+	8	4
+	+	7	10
+	+	3	33
+	+	4	36
+	+	7	0
+
+> ~/rubyCodes/scramble/NERD_tree_1
+	"	6	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/rubyCodes/hangman/hangman.rb
+	"	113	0
+
+> ~/rubyCodes/scramble/words.
+	"	1	0
+
+> ~/rubyCodes/hangman/words.rb
+	"	1	0
+
+> ~/rubyCodes/hangman/NERD_tree_1
+	"	7	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/rubyCodes/hangman/words
+	"	1	0
+
+> ~/pythonCodes/TSP/10points.txt
+	"	10	0
+	^	10	7
+	.	10	6
+	+	11	0
+	+	11	0
+	+	8	6
+	+	9	5
+	+	10	6
+
+> ~/pythonCodes/TSP/makeInputFiles.py
+	"	23	15
+	^	23	16
+	.	23	15
+	+	1	16
+	+	11	0
+	+	15	0
+	+	13	25
+	+	4	12
+	+	14	0
+	+	15	0
+	+	5	32
+	+	6	24
+	+	8	43
+	+	9	21
+	+	6	18
+	+	7	18
+	+	9	48
+	+	6	22
+	+	2	25
+	+	10	23
+	+	8	25
+	+	15	0
+	+	21	0
+	+	18	0
+	+	16	0
+	+	18	0
+	+	21	0
+	+	16	4
+	+	19	6
+	+	17	15
+	+	20	16
+	+	22	7
+	+	23	17
+	+	12	4
+	+	13	14
+	+	16	4
+	+	17	14
+	+	19	5
+	+	20	15
+	+	22	5
+	+	23	15
+
+> ~/pythonCodes/TSP/points.txt
+	"	5	3
+	.	6	0
+	+	5	4
+	+	6	0
+	+	6	3
+	+	6	0
+
+> ~/pythonCodes/TSP/1000points.txt
+	"	7	0
+
+> ~/pythonCodes/TSP/nearest_neightbor.py
+	"	45	53
+	^	45	54
+	.	45	53
+	+	21	34
+	+	18	0
+	+	30	13
+	+	30	16
+	+	30	27
+	+	30	0
+	+	21	30
+	+	22	0
+	+	30	0
+	+	21	35
+	+	21	0
+	+	10	15
+	+	21	0
+	+	15	46
+	+	16	44
+	+	10	18
+	+	17	25
+	+	18	30
+	+	30	56
+	+	46	26
+	+	17	24
+	+	46	0
+	+	9	29
+	+	9	26
+	+	46	0
+	+	30	21
+	+	30	60
+	+	43	29
+	+	30	20
+	+	31	0
+	+	18	47
+	+	30	3
+	+	18	4
+	+	11	19
+	+	30	0
+	+	7	24
+	+	8	13
+	+	18	33
+	+	11	24
+	+	7	22
+	+	18	3
+	+	6	10
+	+	18	27
+	+	20	0
+	+	28	19
+	+	40	22
+	+	6	0
+	+	28	10
+	+	40	0
+	+	2	0
+	+	40	18
+	+	40	18
+	+	41	25
+	+	43	29
+	+	39	25
+	+	6	11
+	+	20	23
+	+	43	27
+	+	20	18
+	+	18	4
+	+	6	0
+	+	6	50
+	+	20	0
+	+	30	35
+	+	8	22
+	+	30	10
+	+	31	0
+	+	30	35
+	+	28	0
+	+	9	0
+	+	6	33
+	+	20	40
+	+	39	0
+	+	34	0
+	+	38	0
+	+	34	9
+	+	27	11
+	+	28	24
+	+	30	41
+	+	34	41
+	+	35	9
+	+	31	31
+	+	35	35
+	+	32	0
+	+	37	33
+	+	25	39
+	+	25	39
+	+	6	0
+	+	2	0
+	+	24	0
+	+	6	0
+	+	2	15
+	+	25	39
+	+	26	0
+	+	46	0
+	+	3	10
+	+	25	35
+	+	4	11
+	+	22	24
+	+	45	53
+
+> ~/pythonCodes/TSP/NERD_tree_1
+	"	6	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/pythonCodes/TSP/tspinput.py
+	"	7	16
+	^	8	20
+	.	8	19
+	+	12	18
+	+	15	68
+	+	17	23
+	+	15	0
+	+	17	0
+	+	17	3
+	+	17	0
+	+	17	0
+	+	17	43
+	+	17	17
+	+	14	16
+	+	17	24
+	+	17	16
+	+	14	28
+	+	17	10
+	+	17	0
+	+	17	0
+	+	17	0
+	+	17	0
+	+	17	17
+	+	17	0
+	+	17	15
+	+	9	0
+	+	9	0
+	+	16	17
+	+	20	18
+	+	20	29
+	+	20	14
+	+	20	16
+	+	20	10
+	+	20	0
+	+	19	14
+	+	22	27
+	+	19	44
+	+	20	17
+	+	21	0
+	+	18	3
+	+	13	22
+	+	18	41
+	+	12	10
+	+	22	0
+	+	8	19
+
+> ~/.config/polybar/config
+	"	166	0
+	^	148	20
+	.	148	19
+	+	146	0
+	+	128	0
+	+	127	14
+	+	129	22
+	+	136	20
+	+	142	22
+	+	146	20
+	+	152	19
+	+	127	0
+	+	136	20
+	+	142	22
+	+	146	20
+	+	152	19
+	+	127	0
+	+	155	0
+	+	127	0
+	+	156	0
+	+	157	0
+	+	132	20
+	+	138	22
+	+	142	20
+	+	148	19
+
+> ~/.config/NERD_tree_1
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/.config/polybar/config.gz
+	"	1	0
+	.	370	0
+	+	370	0
+
+> ~/.config/polybar/launch.sh
+	"	10	14
+	^	10	15
+	.	10	14
+	+	10	14
+
+> ~/.gitignore
+	"	14	0
+	^	14	0
+	.	14	0
+	+	1	9
+	+	1	10
+	+	1	3
+	+	14	0
 
 > ~/.vimrc
 	"	1	0
