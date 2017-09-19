@@ -43,10 +43,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+Shift+h focus left
+bindsym $mod+Shift+j focus down
+bindsym $mod+Shift+k focus up
+bindsym $mod+Shift+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -55,10 +55,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+#bindsym $mod+Shift+j move left
+#bindsym $mod+Shift+k move down
+#bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -76,7 +76,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+#bindsym $mod+s layout stacking (dont know what this shit does)
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -94,7 +94,7 @@ bindsym $mod+a focus parent
 
 set $workspace1 ""
 set $workspace2 ""
-set $workspace3 "" 
+set $workspace3 ""
 set $workspace4 ""
 
 # switch to workspace
@@ -192,9 +192,10 @@ bindsym $mod+shift+x exec i3lock --color "$bg-color"
 
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym $mod+plus exec --no-startup-id amixer -D pulse sset Master 5%+
+bindsym $mod+minus exec --no-startup-id amixer -D pulse sset Master 5%-
+bindsym $mod+Shift+m exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
 
 
 
@@ -208,5 +209,40 @@ bindsym XF86AudioPrev exec playerctl previous
 exec_always feh --bg-scale /home/bentarman/Pictures/chillCoffeeGirl.png
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+#i3-gaps settings
+smart_gaps on
+gaps inner 15
+gaps outer 15
+
+#bind gaps
+bindsym $mod+s gaps inner current plus 5
+bindsym $mod+Shift+s gaps inner current minus 5
+
+bindsym $mod+z gaps outer current plus 5
+bindsym $mod+Shift+z gaps outer current minus 5
+
+#put to default
+bindsym $mod+Shift+t gaps inner all set 15; gaps outer all set 15
+
+bindsym $mod+Shift+d gaps inner all set 0; gaps outer all set 0
+
+#launch firefox hotkey
+bindsym $mod+Shift+w exec firefox
+
+#resize windows with y,u,i,o
+bindsym $mod+Shift+y resize shrink width 10 px or 10 ppt
+bindsym $mod+Shift+u resize shrink height 10 px or 10 ppt
+bindsym $mod+Shift+i resize grow height 10 px or 10 ppt
+bindsym $mod+Shift+o resize grow  width 10 px or 10 ppt
+
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] resize set 625 400
+for_window [instance="dropdown"] move position center
+for_window [instance="dropdown"] move scratchpad
+exec --no-startup-id $term -name dropdown -e tmux
+
+
+bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
 
 
