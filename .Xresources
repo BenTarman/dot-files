@@ -2,6 +2,9 @@
 URxvt.font:     xft:bitstream vera sans mono:size=12:antialias=true
 URxvt.boldFont: xft:bitstream vera sans mono:bold:size=12:antialias=true
 
+! clear scroll-back by pressing Ctrl-L
+URxvt.keysym.Control-l: command:\033c
+
 ! Scrollbar
 URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
