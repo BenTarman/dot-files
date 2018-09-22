@@ -1,0 +1,43 @@
+#debian packages MAKE SURE ITS IN etc/apt FOLDER
+
+
+# 
+
+#deb cdrom:[Debian GNU/Linux 9.3.0 _Stretch_ - Official amd64 NETINST 20171209-12:10]/ stretch main
+
+#deb cdrom:[Debian GNU/Linux 9.3.0 _Stretch_ - Official amd64 NETINST 20171209-12:10]/ stretch main
+
+# Line commented out by installer because it failed to verify:
+#deb http://security.debian.org/debian-security stretch/updates main
+# Line commented out by installer because it failed to verify:
+#deb-src http://security.debian.org/debian-security stretch/updates main
+
+# stretch-updates, previously known as 'volatile'
+# A network mirror was not selected during install.  The following entries
+# are provided as examples, but you should amend them as appropriate
+# for your mirror of choice.
+#
+
+
+#mozilla sid
+deb http://ftp.us.debian.org/debian/ sid main
+deb-src http://ftp.us.debian.org/debian/ sid main
+
+#realtek firmware
+deb http://ftp.de.debian.org/debian stretch main non-free
+deb-src http://ftp.de.debian.org/debian stretch main non-free
+
+
+
+deb http://security.debian.org/debian-security stretch/updates main
+deb-src http://security.debian.org/debian-security stretch/updates main
+
+deb http://ftp.us.debian.org/debian/ stretch main contrib non-free
+deb-src http://ftp.us.debian.org/debian/ stretch main contrib non-free
+
+
+deb http://repository.spotify.com stable non-free
+
+
+deb http://ftp.debian.org/debian stretch-backports main
+
