@@ -4,7 +4,6 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -13,7 +12,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:mplus-1p 11
+font pango: Inconsolata 15
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -92,13 +91,17 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 ""
-set $workspace2 ""
-set $workspace3 ""
-set $workspace4 ""
+set $w01 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+
+# set $workspace2 ""
+# set $workspace3 ""
+# set $workspace4 ""
 
 # switch to workspace
-bindsym $mod+1 workspace $workspace1
+bindsym $mod+1 workspace $w01
 bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace $workspace4
@@ -110,7 +113,7 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+1 move container to workspace $w01
 bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace $workspace4
@@ -196,8 +199,21 @@ bindsym $mod+plus exec --no-startup-id amixer -D pulse sset Master 5%+
 bindsym $mod+minus exec --no-startup-id amixer -D pulse sset Master 5%-
 bindsym $mod+Shift+m exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
+# back light controls
+bindsym $mod+b exec --no-startup-id xbacklight -inc 10 
+bindsym $mod+Shift+b exec --no-startup-id xbacklight -dec 10 
 
-
+# https://github.com/ValveSoftware/steam-for-linux/issues/1040
+for_window [class="^Steam$" title="^Friends$"] floating enable
+for_window [class="^Steam$" title="Steam - News"] floating enable
+for_window [class="^Steam$" title=".* - Chat"] floating enable
+for_window [class="^Steam$" title="^Settings$"] floating enable
+for_window [class="^Steam$" title=".* - event started"] floating enable
+for_window [class="^Steam$" title=".* CD key"] floating enable
+for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
+for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
+for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
+for_window [title="^Steam Keyboard$"] floating enable
 
 # Media player controls make sure playerctl downloaded
 bindsym XF86AudioPlay exec playerctl play
@@ -206,14 +222,14 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 #wallapper here (uses feh program)
-exec_always feh --bg-scale /home/bentarman/Pictures/chillCoffeeGirl.png
+exec_always feh --bg-scale /home/ben/Pictures/japRainHouse.jpg
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 #i3-gaps settings
-smart_gaps on
-gaps inner 15
-gaps outer 15
+#smart_gaps on
+#gaps inner 15
+#gaps outer 15
 
 #bind gaps
 bindsym $mod+s gaps inner current plus 5
@@ -242,7 +258,6 @@ for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
 exec --no-startup-id $term -name dropdown -e tmux
 
-
 bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
 
-
+#youtubeMusic player bindings
